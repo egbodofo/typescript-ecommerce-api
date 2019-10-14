@@ -33,7 +33,7 @@ var productSchema = new mongoose_1.default.Schema({
     },
     owner: {
         type: mongoose_1.default.Schema.Types.ObjectId,
-        // required: true,
+        required: true,
         ref: 'User',
     },
 }, {

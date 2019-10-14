@@ -16,7 +16,7 @@ export interface IntUser extends IUser {
   generateAuthToken: () => string;
 }
 
-export interface IntUserModel extends Model<IUser> {
+export interface IntUserModel extends Model<IntUser> {
   findByCredentials: (email: string, password: string) => Promise<IntUser>;
 }
 

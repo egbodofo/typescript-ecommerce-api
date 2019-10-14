@@ -1,6 +1,6 @@
 import mongoose, { Document, Model } from 'mongoose';
 
-export interface ICamp extends Document {
+export interface IProduct extends Document {
   name: string;
   price: string;
   image: string;
@@ -38,7 +38,7 @@ const productSchema = new mongoose.Schema(
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      // required: true,
+      required: true,
       ref: 'User',
     },
   },
@@ -47,6 +47,6 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-const Product = mongoose.model<ICamp>('Product', productSchema);
+const Product = mongoose.model<IProduct>('Product', productSchema);
 
 export default Product;

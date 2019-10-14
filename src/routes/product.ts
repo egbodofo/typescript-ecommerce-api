@@ -1,4 +1,4 @@
-import Product, { ICamp } from '../models/product';
+import Product, { IProduct } from '../models/product';
 import { Router, Request, Response } from 'express';
 import auth, { IRequest } from '../middleware/auth';
 
