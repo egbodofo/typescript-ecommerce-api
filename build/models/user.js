@@ -46,15 +46,13 @@ var validator_1 = __importDefault(require("validator"));
 var userSchema = new mongoose_1.default.Schema({
     firstname: {
         type: String,
-        unique: true,
-        // required: true,
+        required: true,
         trim: true,
         lowercase: true,
     },
     lastname: {
         type: String,
-        unique: true,
-        // required: true,
+        required: true,
         trim: true,
         lowercase: true,
     },
@@ -71,7 +69,7 @@ var userSchema = new mongoose_1.default.Schema({
         },
     },
     phonenumber: {
-        type: Number,
+        type: String,
         required: true,
         trim: true,
         lowercase: true,

@@ -24,15 +24,13 @@ const userSchema = new mongoose.Schema(
   {
     firstname: {
       type: String,
-      unique: true,
-      // required: true,
+      required: true,
       trim: true,
       lowercase: true,
     },
     lastname: {
       type: String,
-      unique: true,
-      // required: true,
+      required: true,
       trim: true,
       lowercase: true,
     },
@@ -49,7 +47,7 @@ const userSchema = new mongoose.Schema(
       },
     },
     phonenumber: {
-      type: Number,
+      type: String,
       required: true,
       trim: true,
       lowercase: true,
