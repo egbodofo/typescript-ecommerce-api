@@ -1,13 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import User, { IUser } from '../models/user';
-
 export interface IRequest extends Request {
   token?: string | null | undefined;
   user?: { [u: string]: any } | null | undefined;
   header: string | any;
 }
-
 interface IVerifyTokenResult {
   _id: string;
 }

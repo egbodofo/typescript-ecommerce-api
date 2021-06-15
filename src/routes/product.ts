@@ -1,5 +1,5 @@
-import Product, { IProduct } from '../models/product';
-import { Router, Request, Response } from 'express';
+import Product from '../models/product';
+import { Router, Response } from 'express';
 import auth, { IRequest } from '../middleware/auth';
 
 const router = Router();
